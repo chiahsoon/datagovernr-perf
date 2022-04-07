@@ -1,0 +1,22 @@
+env:
+  es2021: true
+  node: true
+extends:
+  - google
+parser: '@typescript-eslint/parser'
+parserOptions:
+  ecmaVersion: 13
+  sourceType: module
+plugins:
+  - '@typescript-eslint'
+ignorePatterns:
+  - '**/migration/*.ts'
+rules: {
+  "indent": ["error", 4],
+  "max-len": ["error", { "code": 140, "tabWidth": 4 }],
+  "no-use-before-define": "off",
+  "@typescript-eslint/no-use-before-define": "off",
+  "require-jsdoc": "off",
+  "new-cap": "off",
+  "no-unused-vars": "off",
+}
